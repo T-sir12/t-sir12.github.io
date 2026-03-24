@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact – CalculsQuebec.ca</title>
+  <meta name="description" content="Contactez l'équipe de CalculsQuebec.ca pour toute question, suggestion ou signalement d'erreur sur nos outils financiers.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9586278174692187" crossorigin="anonymous"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0e1210; --bg-card: #161c18; --accent: #4ade80;
+      --accent-glow: rgba(74,222,128,0.12); --border: rgba(255,255,255,0.07);
+      --border-accent: rgba(74,222,128,0.25); --text: #f0ede6;
+      --text-muted: #8a9e90; --text-dim: #4a5e52;
+    }
+    body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; min-height: 100vh; line-height: 1.7; }
+    .wrap { max-width: 680px; margin: 0 auto; padding: 0 20px 80px; }
+    header { padding: 48px 0 40px; border-bottom: 1px solid var(--border); margin-bottom: 40px; }
+    .back-link { font-size: 13px; color: var(--accent); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-bottom: 20px; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 400; margin-bottom: 10px; }
+    h1 em { font-style: italic; color: var(--accent); }
+    .sub { font-size: 15px; color: var(--text-muted); }
+    .content { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 36px; }
+    .reasons-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0 28px; }
+    @media (max-width: 480px) { .reasons-grid { grid-template-columns: 1fr; } }
+    .reason { background: rgba(74,222,128,0.05); border: 1px solid var(--border-accent); border-radius: 10px; padding: 14px 16px; }
+    .reason-title { font-size: 13px; font-weight: 600; color: var(--accent); margin-bottom: 4px; }
+    .reason-desc { font-size: 12px; color: var(--text-dim); }
+    .form-label { font-size: 13px; color: var(--text-muted); margin-bottom: 6px; display: block; }
+    .form-group { margin-bottom: 18px; }
+    input, select, textarea {
+      width: 100%; padding: 12px 14px;
+      background: #111712; border: 1px solid var(--border);
+      border-radius: 10px; color: var(--text);
+      font-family: 'DM Sans', sans-serif; font-size: 14px;
+      outline: none; transition: border-color 0.15s;
+    }
+    input:focus, select:focus, textarea:focus { border-color: var(--border-accent); }
+    textarea { resize: vertical; min-height: 120px; }
+    select option { background: #161c18; }
+    .submit-btn {
+      width: 100%; padding: 14px;
+      background: var(--accent); color: #0e1210;
+      font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 700;
+      border: none; border-radius: 10px; cursor: pointer;
+      transition: opacity 0.15s;
+    }
+    .submit-btn:hover { opacity: 0.85; }
+    .success-msg { display: none; text-align: center; padding: 20px; background: rgba(74,222,128,0.08); border: 1px solid var(--border-accent); border-radius: 10px; color: var(--accent); font-size: 15px; margin-top: 16px; }
+    p { font-size: 15px; color: var(--text-muted); margin-bottom: 16px; }
+    footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .footer-note { font-size: 12px; color: var(--text-dim); }
+    nav { display: flex; gap: 16px; flex-wrap: wrap; }
+    nav a { font-size: 13px; color: var(--text-muted); text-decoration: none; }
+    nav a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a href="https://calculsquebec.ca" class="back-link">← Retour aux calculateurs</a>
+    <h1><em>Contactez</em>-nous</h1>
+    <p class="sub">Une question, une suggestion ou une erreur à signaler? On vous répond dans les plus brefs délais.</p>
+  </header>
+
+  <div class="content">
+    <p>Nous sommes une petite équipe passionnée par les finances personnelles québécoises. Votre feedback nous aide à améliorer nos outils!</p>
+
+    <div class="reasons-grid">
+      <div class="reason">
+        <div class="reason-title">🐛 Signaler une erreur</div>
+        <div class="reason-desc">Taux incorrects ou bug dans un calculateur</div>
+      </div>
+      <div class="reason">
+        <div class="reason-title">💡 Suggérer un outil</div>
+        <div class="reason-desc">Vous avez une idée de calculateur utile?</div>
+      </div>
+      <div class="reason">
+        <div class="reason-title">❓ Question générale</div>
+        <div class="reason-desc">Toute autre question sur nos outils</div>
+      </div>
+      <div class="reason">
+        <div class="reason-title">🤝 Partenariat</div>
+        <div class="reason-desc">Collaboration ou partenariat commercial</div>
+      </div>
+    </div>
+
+    <form id="contact-form" onsubmit="handleSubmit(event)">
+      <div class="form-group">
+        <label class="form-label" for="nom">Votre nom</label>
+        <input type="text" id="nom" placeholder="Jean Tremblay" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="email">Adresse courriel</label>
+        <input type="email" id="email" placeholder="jean@exemple.com" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="sujet">Sujet</label>
+        <select id="sujet">
+          <option value="">Choisir un sujet...</option>
+          <option value="erreur">Signaler une erreur de calcul</option>
+          <option value="suggestion">Suggérer un nouvel outil</option>
+          <option value="question">Question générale</option>
+          <option value="partenariat">Partenariat</option>
+          <option value="autre">Autre</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="message">Message</label>
+        <textarea id="message" placeholder="Décrivez votre question ou suggestion..." required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Envoyer le message</button>
+    </form>
+    <div class="success-msg" id="success-msg">✅ Merci! Votre message a été envoyé. Nous vous répondrons dans les plus brefs délais.</div>
+  </div>
+
+  <footer>
+    <div class="footer-note">© 2026 CalculsQuebec.ca — Tous droits réservés</div>
+    <nav>
+      <a href="https://calculsquebec.ca">Accueil</a>
+      <a href="https://calculsquebec.ca/a-propos">À propos</a>
+      <a href="https://calculsquebec.ca/politique-confidentialite">Confidentialité</a>
+    </nav>
+  </footer>
+</div>
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  document.getElementById('contact-form').style.display = 'none';
+  document.getElementById('success-msg').style.display = 'block';
+}
+</script>
+</body>
+</html>
