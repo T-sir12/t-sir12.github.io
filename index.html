@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculateur Salaire Net Québec 2026 – Gratuit et Précis</title>
+  <meta name="description" content="Calculez votre salaire net au Québec en 2025. Impôt fédéral, provincial, RRQ, AE, RQAP. Résultat instantané et gratuit pour salariés et travailleurs autonomes.">
+  <meta name="google-site-verification" content="Ctv9beUY3wGFsV-bfKvkZT0HltGyU9rsfxSaVyz5yUk" />
+  <meta name="keywords" content="calculateur salaire net québec 2025, impôt québec, salaire net, RRQ, AE, RQAP, calculateur impôt">
+  <meta property="og:title" content="Calculateur Salaire Net Québec 2026">
+  <meta property="og:description" content="Calculez votre salaire net instantanément. Taux 2025 officiels. Gratuit.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9586278174692187" crossorigin="anonymous"></script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0e1210;
+      --bg-card: #161c18;
+      --bg-card2: #1c2420;
+      --bg-input: #111712;
+      --accent: #4ade80;
+      --accent-dim: #2d6e47;
+      --accent-glow: rgba(74,222,128,0.12);
+      --text: #f0ede6;
+      --text-muted: #8a9e90;
+      --text-dim: #4a5e52;
+      --border: rgba(255,255,255,0.07);
+      --border-accent: rgba(74,222,128,0.25);
+      --red: #f87171;
+      --amber: #fbbf24;
+      --radius: 14px;
+      --radius-sm: 8px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* ── BRUIT DE FOND SUBTIL ── */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0; opacity: 0.4;
+    }
+
+    .page-wrap { position: relative; z-index: 1; max-width: 780px; margin: 0 auto; padding: 0 20px 80px; }
+
+    /* ── HEADER ── */
+    header {
+      padding: 56px 0 40px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 40px;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .header-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--accent);
+      background: var(--accent-glow);
+      border: 1px solid var(--border-accent);
+      padding: 5px 12px; border-radius: 99px;
+      margin-bottom: 20px;
+    }
+    .header-tag::before { content: ''; width: 6px; height: 6px; background: var(--accent); border-radius: 50%; animation: pulse 2s infinite; }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--text);
+      margin-bottom: 14px;
+    }
+    h1 em { font-style: italic; color: var(--accent); }
+
+    .header-sub { color: var(--text-muted); font-size: 15px; max-width: 520px; }
+
+    /* ── AD SLOT TOP ── */
+    .ad-slot {
+      background: var(--bg-card);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 13px;
+      margin-bottom: 32px;
+      min-height: 100px;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    /* ── CALCULATOR CARD ── */
+    .calc-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      margin-bottom: 24px;
+      animation: fadeUp 0.6s 0.1s ease both;
+    }
+
+    .card-title {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--text-dim);
+      margin-bottom: 20px;
+    }
+
+    /* ── SALARY DISPLAY ── */
+    .salary-display {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.4rem, 6vw, 3.5rem);
+      color: var(--text);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .salary-display sup { font-size: 0.4em; vertical-align: super; color: var(--text-muted); margin-right: 4px; }
+
+    .slider-wrap { margin: 20px 0; }
+
+    input[type="range"] {
+      -webkit-appearance: none;
+      width: 100%; height: 3px;
+      background: var(--bg-card2);
+      border-radius: 99px;
+      outline: none;
+      cursor: pointer;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px var(--accent-glow);
+      cursor: pointer;
+      transition: box-shadow 0.2s;
+    }
+    input[type="range"]::-webkit-slider-thumb:hover { box-shadow: 0 0 0 8px var(--accent-glow); }
+    input[type="range"]::-moz-range-thumb {
+      width: 20px; height: 20px; border-radius: 50%;
+      background: var(--accent); border: none;
+      cursor: pointer;
+    }
+
+    .slider-labels { display: flex; justify-content: space-between; font-size: 12px; color: var(--text-dim); margin-top: 8px; }
+
+    /* ── TOGGLE BUTTONS ── */
+    .toggle-group { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 20px; }
+
+    .tog {
+      font-size: 13px; font-family: 'DM Sans', sans-serif;
+      padding: 7px 16px;
+      border-radius: 99px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .tog:hover { border-color: var(--border-accent); color: var(--text); }
+    .tog.active {
+      background: var(--accent-glow);
+      border-color: var(--border-accent);
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* ── REER SLIDER ── */
+    .reer-section { margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border); }
+    .reer-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+    .reer-label { font-size: 14px; color: var(--text-muted); }
+    .reer-val { font-size: 14px; font-weight: 500; color: var(--accent); }
+
+    /* ── RESULTS ── */
+    .results-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 24px;
+      animation: fadeUp 0.6s 0.2s ease both;
+    }
+
+    .result-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      transition: border-color 0.2s;
+    }
+    .result-card:hover { border-color: var(--border-accent); }
+    .result-card.hero {
+      background: linear-gradient(135deg, #1a2e20 0%, #162218 100%);
+      border-color: var(--border-accent);
+      grid-column: 1 / -1;
+    }
+
+    .result-label { font-size: 12px; color: var(--text-dim); margin-bottom: 8px; letter-spacing: 0.04em; }
+    .result-val { font-family: 'DM Serif Display', serif; font-size: 1.7rem; color: var(--text); }
+    .result-card.hero .result-val { font-size: clamp(2rem, 5vw, 2.8rem); color: var(--accent); }
+    .result-val.neg { color: var(--red); font-size: 1.4rem; }
+    .result-sub { font-size: 12px; color: var(--text-dim); margin-top: 4px; }
+
+    /* ── FREQUENCY TABS ── */
+    .freq-section { margin-bottom: 24px; animation: fadeUp 0.6s 0.25s ease both; }
+    .freq-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 10px; }
+
+    /* ── BREAKDOWN TABLE ── */
+    .breakdown-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 24px;
+      animation: fadeUp 0.6s 0.3s ease both;
+    }
+
+    .breakdown-header {
+      padding: 16px 24px;
+      border-bottom: 1px solid var(--border);
+      font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--text-dim);
+      display: flex; justify-content: space-between;
+    }
+
+    .breakdown-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 13px 24px;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      transition: background 0.15s;
+    }
+    .breakdown-row:last-child { border-bottom: none; }
+    .breakdown-row:hover { background: rgba(255,255,255,0.02); }
+    .breakdown-row.total {
+      background: rgba(74,222,128,0.04);
+      border-top: 1px solid var(--border-accent);
+    }
+    .breakdown-row.section-header {
+      background: var(--bg-card2);
+      font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--text-dim); padding: 8px 24px;
+    }
+
+    .bd-name { color: var(--text-muted); }
+    .bd-name.strong { color: var(--text); font-weight: 500; }
+    .bd-amount { font-weight: 500; }
+    .bd-amount.neg { color: var(--red); }
+    .bd-amount.pos { color: var(--accent); }
+
+    /* ── BAR CHART ── */
+    .chart-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 24px;
+      animation: fadeUp 0.6s 0.35s ease both;
+    }
+    .chart-title { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 20px; }
+
+    .bar-container { display: flex; flex-direction: column; gap: 12px; }
+
+    .bar-item { display: flex; align-items: center; gap: 12px; }
+    .bar-item-label { font-size: 13px; color: var(--text-muted); min-width: 160px; }
+    .bar-track { flex: 1; height: 8px; background: var(--bg-card2); border-radius: 99px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 99px; transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+    .bar-pct { font-size: 13px; color: var(--text-muted); min-width: 42px; text-align: right; }
+
+    /* ── SEO CONTENT ── */
+    .seo-section {
+      margin-top: 48px; padding-top: 40px;
+      border-top: 1px solid var(--border);
+      animation: fadeUp 0.6s 0.4s ease both;
+    }
+    .seo-section h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.6rem; font-weight: 400;
+      margin-bottom: 14px; color: var(--text);
+    }
+    .seo-section h3 {
+      font-size: 1rem; font-weight: 500;
+      color: var(--text); margin: 24px 0 8px;
+    }
+    .seo-section p { font-size: 15px; color: var(--text-muted); line-height: 1.75; margin-bottom: 12px; }
+    .seo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+    .seo-fact {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 16px 18px;
+    }
+    .seo-fact-title { font-size: 12px; color: var(--text-dim); margin-bottom: 4px; }
+    .seo-fact-val { font-size: 1.1rem; font-weight: 500; color: var(--text); }
+
+    /* ── AD SLOT BOTTOM ── */
+    .ad-slot-bottom {
+      margin-top: 40px;
+      background: var(--bg-card);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 13px;
+      min-height: 250px;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      margin-top: 60px; padding-top: 24px;
+      border-top: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 12px;
+    }
+    .footer-note { font-size: 12px; color: var(--text-dim); }
+    .footer-badge {
+      font-size: 11px; color: var(--text-dim);
+      background: var(--bg-card); border: 1px solid var(--border);
+      padding: 5px 12px; border-radius: 99px;
+    }
+
+    /* ── ANIMATIONS ── */
+
+    .faq-section { margin-top: 40px; padding-top: 36px; border-top: 1px solid var(--border); }
+    .faq-title { font-family: 'DM Serif Display', serif; font-size: 1.6rem; font-weight: 400; margin-bottom: 24px; color: var(--text); }
+    .faq-item { border: 1px solid var(--border); border-radius: var(--radius-sm); margin-bottom: 10px; overflow: hidden; }
+    .faq-question { width: 100%; text-align: left; background: var(--bg-card2); border: none; padding: 16px 20px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; color: var(--text); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .faq-question:hover { background: rgba(74,222,128,0.05); }
+    .faq-arrow { color: var(--accent); font-size: 18px; transition: transform 0.2s; flex-shrink: 0; }
+    .faq-answer { display: none; padding: 0 20px 16px; font-size: 14px; color: var(--text-muted); line-height: 1.75; background: var(--bg-card); }
+    .faq-item.open .faq-answer { display: block; }
+    .faq-item.open .faq-arrow { transform: rotate(45deg); }
+    .nav-links { margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border); display: flex; gap: 20px; flex-wrap: wrap; }
+    .nav-links a { font-size: 13px; color: var(--text-dim); text-decoration: none; }
+    .nav-links a:hover { color: var(--accent); }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; } 50% { opacity: 0.4; }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 560px) {
+      .results-grid { grid-template-columns: 1fr; }
+      .seo-grid { grid-template-columns: 1fr; }
+      .calc-card { padding: 22px; }
+      .bar-item-label { min-width: 110px; }
+      header { padding: 36px 0 28px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-tag">Taux officiels 2026</div>
+    <h1>Votre salaire net au <em>Québec</em></h1>
+    <p class="header-sub">Calculez instantanément votre salaire après impôts — fédéral, provincial, RRQ, AE et RQAP. Gratuit, sans inscription.</p>
+  </header>
+
+  <!-- PUB HAUT (décommentez après approbation AdSense) -->
+  <div class="ad-slot">
+    <!-- Remplacez ce bloc par votre code AdSense une fois approuvé -->
+    <span>Espace publicitaire – Google AdSense (728×90)</span>
+  </div>
+
+  <!-- CALCULATEUR -->
+  <div class="calc-card">
+    <div class="card-title">Paramètres</div>
+
+    <div class="salary-display">
+      <sup>$</sup><span id="salary-display">60 000</span>
+    </div>
+    <div style="font-size:13px; color:var(--text-dim); margin-bottom:4px;">salaire brut annuel</div>
+
+    <div class="slider-wrap">
+      <input type="range" id="salary" min="20000" max="250000" step="1000" value="60000">
+      <div class="slider-labels"><span>20 000 $</span><span>250 000 $</span></div>
+    </div>
+
+    <div style="margin-bottom:8px; font-size:12px; color:var(--text-dim); letter-spacing:0.08em; text-transform:uppercase; margin-top:20px;">Type d'emploi</div>
+    <div class="toggle-group">
+      <button class="tog active" id="btn-emp" onclick="setType('employe')">Salarié(e)</button>
+      <button class="tog" id="btn-tns" onclick="setType('autonome')">Travailleur autonome</button>
+    </div>
+
+    <div class="reer-section">
+      <div class="reer-header">
+        <span class="reer-label">Cotisation REER annuelle</span>
+        <span class="reer-val" id="reer-out">0 $</span>
+      </div>
+      <input type="range" id="reer" min="0" max="31560" step="500" value="0">
+      <div class="slider-labels"><span>0 $</span><span>31 560 $ (max)</span></div>
+    </div>
+  </div>
+
+  <!-- FRÉQUENCE -->
+  <div class="freq-section">
+    <div class="freq-label">Afficher les résultats</div>
+    <div class="toggle-group">
+      <button class="tog active" id="freq-an" onclick="setFreq('annuel')">Par année</button>
+      <button class="tog" id="freq-mo" onclick="setFreq('mensuel')">Par mois</button>
+      <button class="tog" id="freq-bi" onclick="setFreq('bimensuel')">Aux 2 semaines</button>
+      <button class="tog" id="freq-hr" onclick="setFreq('heure')">Par heure</button>
+    </div>
+  </div>
+
+  <!-- RÉSULTATS -->
+  <div class="results-grid">
+    <div class="result-card hero">
+      <div class="result-label" id="net-label">Salaire net annuel</div>
+      <div class="result-val" id="r-net">–</div>
+      <div class="result-sub" id="net-sub"></div>
+    </div>
+    <div class="result-card">
+      <div class="result-label">Total déductions</div>
+      <div class="result-val neg" id="r-ded">–</div>
+      <div class="result-sub">impôts + cotisations</div>
+    </div>
+    <div class="result-card">
+      <div class="result-label">Taux marginal</div>
+      <div class="result-val" id="r-marg">–</div>
+      <div class="result-sub">dernier dollar gagné</div>
+    </div>
+  </div>
+
+  <!-- VENTILATION -->
+  <div class="breakdown-card">
+    <div class="breakdown-header">
+      <span>Ventilation complète</span>
+      <span id="freq-label-bd">annuel</span>
+    </div>
+    <div class="breakdown-row">
+      <span class="bd-name strong">Salaire brut</span>
+      <span class="bd-amount pos" id="b-brut">–</span>
+    </div>
+    <div class="breakdown-row section-header"><span>Impôts</span></div>
+    <div class="breakdown-row">
+      <span class="bd-name">Impôt fédéral</span>
+      <span class="bd-amount neg" id="b-fed">–</span>
+    </div>
+    <div class="breakdown-row">
+      <span class="bd-name">Impôt provincial (QC)</span>
+      <span class="bd-amount neg" id="b-prov">–</span>
+    </div>
+    <div class="breakdown-row section-header"><span>Cotisations sociales</span></div>
+    <div class="breakdown-row">
+      <span class="bd-name">Régie des rentes (RRQ)</span>
+      <span class="bd-amount neg" id="b-rrq">–</span>
+    </div>
+    <div class="breakdown-row" id="ae-row">
+      <span class="bd-name">Assurance-emploi (AE)</span>
+      <span class="bd-amount neg" id="b-ae">–</span>
+    </div>
+    <div class="breakdown-row">
+      <span class="bd-name">RQAP (congés parentaux)</span>
+      <span class="bd-amount neg" id="b-rqap">–</span>
+    </div>
+    <div class="breakdown-row" id="reer-row" style="display:none;">
+      <span class="bd-name">Déduction REER</span>
+      <span class="bd-amount neg" id="b-reer">–</span>
+    </div>
+    <div class="breakdown-row total">
+      <span class="bd-name strong">Salaire net</span>
+      <span class="bd-amount pos" id="b-net">–</span>
+    </div>
+  </div>
+
+  <!-- GRAPHIQUE -->
+  <div class="chart-card">
+    <div class="chart-title">Répartition de votre salaire brut</div>
+    <div class="bar-container">
+      <div class="bar-item">
+        <div class="bar-item-label">Salaire net</div>
+        <div class="bar-track"><div class="bar-fill" id="bar-net" style="background:#4ade80;"></div></div>
+        <div class="bar-pct" id="pct-net">–</div>
+      </div>
+      <div class="bar-item">
+        <div class="bar-item-label">Impôt fédéral</div>
+        <div class="bar-track"><div class="bar-fill" id="bar-fed" style="background:#f87171;"></div></div>
+        <div class="bar-pct" id="pct-fed">–</div>
+      </div>
+      <div class="bar-item">
+        <div class="bar-item-label">Impôt provincial</div>
+        <div class="bar-track"><div class="bar-fill" id="bar-prov" style="background:#fb923c;"></div></div>
+        <div class="bar-pct" id="pct-prov">–</div>
+      </div>
+      <div class="bar-item">
+        <div class="bar-item-label">RRQ</div>
+        <div class="bar-track"><div class="bar-fill" id="bar-rrq" style="background:#fbbf24;"></div></div>
+        <div class="bar-pct" id="pct-rrq">–</div>
+      </div>
+      <div class="bar-item" id="bar-ae-item">
+        <div class="bar-item-label">AE</div>
+        <div class="bar-track"><div class="bar-fill" id="bar-ae" style="background:#a78bfa;"></div></div>
+        <div class="bar-pct" id="pct-ae">–</div>
+      </div>
+      <div class="bar-item">
+        <div class="bar-item-label">RQAP</div>
+        <div class="bar-track"><div class="bar-fill" id="bar-rqap" style="background:#38bdf8;"></div></div>
+        <div class="bar-pct" id="pct-rqap">–</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PUB MILIEU -->
+  <div class="ad-slot">
+    <!-- Espace publicitaire – Google AdSense (336×280) -->
+    <span>Espace publicitaire – Google AdSense (336×280)</span>
+  </div>
+
+  <!-- CONTENU SEO -->
+  <section class="seo-section">
+    <h2>Comment calculer votre salaire net au Québec en 2025</h2>
+    <p>Au Québec, votre salaire net est le montant que vous recevez réellement après les déductions obligatoires. Contrairement aux autres provinces canadiennes, le Québec a sa propre agence de perception fiscale — Revenu Québec — et gère ses propres programmes sociaux comme le RRQ et le RQAP.</p>
+
+    <h3>Les taux d'imposition fédéraux 2025</h3>
+    <p>Le Canada utilise un système d'imposition progressif à paliers. Le premier palier de 57 375 $ est imposé à 15 %, puis 20,5 % jusqu'à 114 750 $, et ainsi de suite. Tous les contribuables bénéficient du montant personnel de base fédéral de 16 129 $.</p>
+
+    <h3>Les taux d'imposition provinciaux du Québec 2025</h3>
+    <p>Le Québec est la province avec le taux d'imposition le plus élevé au Canada, mais en contrepartie, elle offre des services publics parmi les plus généreux : garderies à 10,70 $, congés parentaux parmi les plus avantageux, etc. Le montant personnel de base provincial est de 17 183 $.</p>
+
+    <div class="seo-grid">
+      <div class="seo-fact">
+        <div class="seo-fact-title">Taux RRQ 2026 (salarié)</div>
+        <div class="seo-fact-val">5,3 % base + 4 % supp. / 85 000 $</div>
+      </div>
+      <div class="seo-fact">
+        <div class="seo-fact-title">Taux AE 2026 (QC)</div>
+        <div class="seo-fact-val">1,30 % jusqu'à 68 900 $</div>
+      </div>
+      <div class="seo-fact">
+        <div class="seo-fact-title">Taux RQAP 2026 (salarié)</div>
+        <div class="seo-fact-val">0,430 % jusqu'à 103 000 $</div>
+      </div>
+      <div class="seo-fact">
+        <div class="seo-fact-title">Plafond REER 2026</div>
+        <div class="seo-fact-val">32 490 $ (18 % revenu)</div>
+      </div>
+    </div>
+
+    <h3>Pourquoi cotiser au REER?</h3>
+    <p>La cotisation au REER (Régime enregistré d'épargne-retraite) réduit directement votre revenu imposable. Par exemple, une cotisation de 5 000 $ peut vous faire économiser entre 1 500 $ et 2 250 $ en impôts selon votre palier — un rendement immédiat garanti sur votre épargne.</p>
+
+    <h3>Travailleurs autonomes : ce qui change</h3>
+    <p>Les travailleurs autonomes paient la double cotisation RRQ (part employé + part employeur, soit 10,8 % de base + 2 % supplémentaire) et les cotisations RQAP à un taux légèrement différent. En revanche, ils ne cotisent pas à l'assurance-emploi standard, bien que des cotisations volontaires soient possibles.</p>
+  </section>
+
+  <!-- PUB BAS -->
+  <div class="ad-slot-bottom">
+    <!-- Espace publicitaire – Google AdSense (300×250) -->
+    <span>Espace publicitaire – Google AdSense (300×250)</span>
+  </div>
+
+
+  <section class="faq-section">
+    <div class="faq-title">Questions fréquentes</div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Quelle est la différence entre salaire brut et salaire net?
+        <span class="faq-arrow">+</span>
+      </button>
+      <div class="faq-answer">Le salaire brut est le montant total que votre employeur s'engage à vous verser avant toute déduction. Le salaire net, ou "take-home pay", est ce que vous recevez réellement dans votre compte bancaire après que toutes les déductions obligatoires ont été retirées : impôt fédéral, impôt provincial québécois, cotisations au RRQ, à l'assurance-emploi (AE) et au RQAP. Au Québec, l'écart entre brut et net est généralement plus important que dans les autres provinces canadiennes en raison des taux d'imposition provinciaux plus élevés, mais en contrepartie les services publics sont plus généreux.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Comment est calculé l'impôt provincial au Québec en 2026?
+        <span class="faq-arrow">+</span>
+      </button>
+      <div class="faq-answer">L'impôt provincial québécois est calculé selon un système progressif à 4 paliers. Pour 2026, les taux sont : 14% sur les premiers 53 255$, 19% de 53 255$ à 106 495$, 24% de 106 495$ à 129 590$, et 25,75% au-delà de 129 590$. Tous les contribuables bénéficient d'un montant personnel de base de 17 183$ qui réduit l'impôt payable. Le Québec est la seule province à administrer elle-même son impôt via Revenu Québec, séparément de l'Agence du revenu du Canada.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Qu'est-ce que le RRQ et combien dois-je cotiser en 2026?
+        <span class="faq-arrow">+</span>
+      </button>
+      <div class="faq-answer">Le Régime de rentes du Québec (RRQ) est un régime public d'assurance retraite obligatoire pour tous les travailleurs québécois gagnant plus de 3 500$ par an. En 2026, le taux de cotisation de base est de 5,3% sur les revenus entre 3 500$ et 74 600$ (le maximum des gains admissibles). Une cotisation supplémentaire de 4% s'applique sur les revenus entre 74 600$ et 85 000$. En cotisant toute votre carrière, vous accumulerez des droits à une rente de retraite versée dès l'âge de 60 ans (avec réduction) ou 65 ans (taux plein).</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Pourquoi les travailleurs autonomes paient-ils plus de RRQ?
+        <span class="faq-arrow">+</span>
+      </button>
+      <div class="faq-answer">Un employé salarié paie seulement la moitié de la cotisation RRQ — son employeur paie l'autre moitié. Le travailleur autonome, lui, doit assumer les deux parts puisqu'il est à la fois employé et employeur. En 2026, cela représente un taux de 10,6% (contre 5,3% pour un salarié) sur les revenus entre 3 500$ et 74 600$. Cette cotisation plus élevée est compensée par le fait que la portion "employeur" est déductible d'impôt dans la déclaration de revenus.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Comment réduire légalement mes impôts au Québec?
+        <span class="faq-arrow">+</span>
+      </button>
+      <div class="faq-answer">La façon la plus efficace de réduire vos impôts légalement au Québec est de cotiser à un REER (Régime enregistré d'épargne-retraite). Chaque dollar cotisé réduit directement votre revenu imposable. D'autres stratégies incluent : les cotisations à un CELI (non déductibles mais les revenus sont à l'abri de l'impôt), les frais de garde d'enfants, les dons de bienfaisance, les frais médicaux admissibles, et les frais de déménagement si vous avez déménagé pour le travail. Si vous êtes travailleur autonome, plusieurs dépenses d'entreprise sont déductibles.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Quel est le salaire minimum au Québec en 2026?
+        <span class="faq-arrow">+</span>
+      </button>
+      <div class="faq-answer">Le salaire minimum au Québec est régulièrement révisé par le gouvernement. Il s'applique à la grande majorité des travailleurs, qu'ils soient à temps plein ou à temps partiel. Pour connaître le taux exact en vigueur, consultez le site officiel de la Commission des normes, de l'équité, de la santé et de la sécurité du travail (CNESST). Notez que certaines catégories de travailleurs, comme les serveurs qui reçoivent des pourboires, peuvent avoir un taux différent.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Qu'est-ce que le RQAP et qui doit y cotiser?
+        <span class="faq-arrow">+</span>
+      </button>
+      <div class="faq-answer">Le Régime québécois d'assurance parentale (RQAP) est un programme d'assurance qui verse des prestations aux parents qui prennent un congé de maternité, de paternité, parental ou d'adoption. En 2026, tous les travailleurs québécois (salariés et autonomes) gagnant plus de 2 000$ doivent y cotiser au taux de 0,430% jusqu'à un maximum de 103 000$ de revenus assurables. En échange, le RQAP offre des prestations parmi les plus généreuses au Canada, incluant des congés paternité exclusifs et des taux de remplacement du revenu élevés.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Comment calculer mon salaire horaire à partir d'un salaire annuel?
+        <span class="faq-arrow">+</span>
+      </button>
+      <div class="faq-answer">Pour convertir un salaire annuel en taux horaire, utilisez notre calculateur en sélectionnant l'affichage "Par heure". Le calcul est basé sur 2 080 heures par année (40 heures par semaine × 52 semaines). Par exemple, un salaire de 60 000$ brut correspond à environ 28,85$/heure brut. Après déductions, le taux net sera inférieur selon votre situation fiscale. Cette conversion est particulièrement utile pour comparer une offre d'emploi à temps plein avec un contrat de travailleur autonome.</div>
+    </div>
+  </section>
+
+  <div class="nav-links">
+    <a href="https://calculsquebec.ca/a-propos.html">À propos</a>
+    <a href="https://calculsquebec.ca/contact.html">Contact</a>
+    <a href="https://calculsquebec.ca/politique-confidentialite.html">Politique de confidentialité</a>
+    <a href="https://calculsquebec.ca">← Tous les outils</a>
+  </div>
+
+  <footer>
+    <div class="footer-note">Les calculs sont basés sur les taux officiels 2026. À titre informatif seulement — consultez un fiscaliste pour votre situation personnelle.</div>
+    <div class="footer-badge">Mis à jour : Mars 2026</div>
+  </footer>
+
+</div>
+
+<script>
+  let empType = 'employe';
+  let freq = 'annuel';
+
+  function setType(t) {
+    empType = t;
+    document.getElementById('btn-emp').className = 'tog' + (t==='employe'?' active':'');
+    document.getElementById('btn-tns').className = 'tog' + (t==='autonome'?' active':'');
+    document.getElementById('ae-row').style.display = t==='autonome' ? 'none' : '';
+    document.getElementById('bar-ae-item').style.display = t==='autonome' ? 'none' : '';
+    calc();
+  }
+
+  function setFreq(f) {
+    freq = f;
+    ['an','mo','bi','hr'].forEach(x => document.getElementById('freq-'+x).className='tog');
+    const map = {annuel:'an',mensuel:'mo',bimensuel:'bi',heure:'hr'};
+    document.getElementById('freq-'+map[f]).className='tog active';
+    calc();
+  }
+
+  const fmt = n => n.toLocaleString('fr-CA', {style:'currency', currency:'CAD', maximumFractionDigits:0});
+  const fmtDec = n => n.toLocaleString('fr-CA', {style:'currency', currency:'CAD', minimumFractionDigits:2, maximumFractionDigits:2});
+
+  function calcFed(income) {
+    const br = [[0,57375,0.15],[57375,114750,0.205],[114750,177882,0.26],[177882,253414,0.29],[253414,Infinity,0.33]];
+    let tax = 0;
+    for (let [lo,hi,r] of br) {
+      if (income <= lo) break;
+      tax += (Math.min(income, hi) - lo) * r;
+    }
+    return Math.max(0, tax - 16129 * 0.15);
+  }
+
+  function calcProv(income) {
+    const br = [[0,53255,0.14],[53255,106495,0.19],[106495,129590,0.24],[129590,Infinity,0.2575]];
+    let tax = 0;
+    for (let [lo,hi,r] of br) {
+      if (income <= lo) break;
+      tax += (Math.min(income, hi) - lo) * r;
+    }
+    return Math.max(0, tax - 17183 * 0.14);
+  }
+
+  function marginalRate(income) {
+    let fedRate = 0.15, provRate = 0.14;
+    if (income > 253414) fedRate = 0.33;
+    else if (income > 177882) fedRate = 0.29;
+    else if (income > 114750) fedRate = 0.26;
+    else if (income > 57375) fedRate = 0.205;
+    if (income > 129590) provRate = 0.2575;
+    else if (income > 106495) provRate = 0.24;
+    else if (income > 53255) provRate = 0.19;
+    return fedRate + provRate;
+  }
+
+  function calc() {
+    const gross = parseInt(document.getElementById('salary').value);
+    const reer = parseInt(document.getElementById('reer').value);
+    const taxableIncome = Math.max(0, gross - reer);
+
+    document.getElementById('salary-display').textContent = gross.toLocaleString('fr-CA');
+    document.getElementById('reer-out').textContent = fmt(reer);
+    document.getElementById('reer-row').style.display = reer > 0 ? '' : 'none';
+
+    // RRQ 2026 — taux officiels Revenu Québec
+    // Base : 5,3% sur (salaire - 3 500$) jusqu'au MGA de 74 600$
+    // Supplémentaire 1 : 1% entre 74 600$ et 74 600$ (même plafond 2026)
+    // Supplémentaire 2 : 4% entre 74 600$ et 85 000$ (salarié ET autonome)
+    const rrqMGA = 74600;
+    const rrqMax1 = 74600;
+    const rrqMax2 = 85000;
+    const rrqBaseRate = empType === 'employe' ? 0.053 : 0.106;
+    const rrqSuppl1Rate = empType === 'employe' ? 0.01 : 0.02;
+    const rrqSuppl2Rate = 0.04;
+    const rrqBase = Math.max(0, (Math.min(gross, rrqMGA) - 3500)) * rrqBaseRate;
+    const rrqSuppl1 = gross > rrqMGA ? (Math.min(gross, rrqMax1) - rrqMGA) * rrqSuppl1Rate : 0;
+    const rrqSuppl2 = gross > rrqMax1 ? (Math.min(gross, rrqMax2) - rrqMax1) * rrqSuppl2Rate : 0;
+    const rrq = rrqBase + rrqSuppl1 + rrqSuppl2;
+    const ae = empType === 'employe' ? Math.min(gross, 68900) * 0.0130 : 0; // AE Québec 2026: 1,30% jusqu'à 68 900$
+    const rqapRate = empType === 'employe' ? 0.00430 : 0.00765; // RQAP 2026
+    const rqap = Math.min(gross, 103000) * rqapRate; // Plafond RQAP 2026: 103 000$
+
+    const fedTax = calcFed(taxableIncome);
+    const provTax = calcProv(taxableIncome);
+    const totalDed = fedTax + provTax + rrq + ae + rqap + reer;
+    const net = gross - fedTax - provTax - rrq - ae - rqap;
+    const taux = (totalDed / gross * 100).toFixed(1);
+    const marg = (marginalRate(taxableIncome) * 100).toFixed(1);
+
+    let div = 1, freqLabel = 'annuel', subNote = '/ mois : ' + fmt(Math.round(net/12));
+    if (freq==='mensuel') { div=12; freqLabel='mensuel'; subNote='/ année : ' + fmt(Math.round(net)); }
+    if (freq==='bimensuel') { div=26; freqLabel='aux 2 sem.'; subNote='/ mois : ' + fmt(Math.round(net/12)); }
+    if (freq==='heure') { div=2080; freqLabel='horaire'; subNote='basé sur 40h/sem.'; }
+
+    const f = v => fmt(Math.round(v / div));
+    const fn = v => '− ' + fmt(Math.round(v / div)).replace(/^−?\s*/,'');
+
+    document.getElementById('r-net').textContent = freq==='heure' ? fmtDec(net/2080) : f(net);
+    document.getElementById('r-ded').textContent = '− ' + fmt(Math.round((fedTax+provTax+rrq+ae+rqap)/div)).replace(/^−?\s*/,'');
+    document.getElementById('r-marg').textContent = marg + ' %';
+    document.getElementById('net-label').textContent = 'Salaire net ' + freqLabel;
+    document.getElementById('net-sub').textContent = subNote;
+    document.getElementById('freq-label-bd').textContent = freqLabel;
+
+    document.getElementById('b-brut').textContent = f(gross);
+    document.getElementById('b-fed').textContent = fn(fedTax);
+    document.getElementById('b-prov').textContent = fn(provTax);
+    document.getElementById('b-rrq').textContent = fn(rrq);
+    document.getElementById('b-ae').textContent = fn(ae);
+    document.getElementById('b-rqap').textContent = fn(rqap);
+    document.getElementById('b-reer').textContent = fn(reer);
+    document.getElementById('b-net').textContent = f(net);
+
+    const pct = v => (v/gross*100).toFixed(1)+'%';
+    const pw = v => (v/gross*100).toFixed(1)+'%';
+
+    document.getElementById('bar-net').style.width = pw(net);
+    document.getElementById('bar-fed').style.width = pw(fedTax);
+    document.getElementById('bar-prov').style.width = pw(provTax);
+    document.getElementById('bar-rrq').style.width = pw(rrq);
+    document.getElementById('bar-ae').style.width = pw(ae);
+    document.getElementById('bar-rqap').style.width = pw(rqap);
+
+    document.getElementById('pct-net').textContent = pct(net);
+    document.getElementById('pct-fed').textContent = pct(fedTax);
+    document.getElementById('pct-prov').textContent = pct(provTax);
+    document.getElementById('pct-rrq').textContent = pct(rrq);
+    document.getElementById('pct-ae').textContent = pct(ae);
+    document.getElementById('pct-rqap').textContent = pct(rqap);
+  }
+
+  
+  function toggleFaq(btn) {
+    const item = btn.parentElement;
+    item.classList.toggle('open');
+  }
+  document.getElementById('salary').addEventListener('input', calc);
+  document.getElementById('reer').addEventListener('input', calc);
+  calc();
+</script>
+</body>
+</html>
