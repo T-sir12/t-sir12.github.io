@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculateurs Financiers Québec 2026 – Gratuits et Précis</title>
+  <meta name="description" content="9 outils de calcul financier gratuits pour les Québécois. Salaire net, hypothèque, taxes TPS/TVQ, REER, loyer vs achat, budget mensuel, dettes, taxe de bienvenue. Taux officiels 2026.">
+  <meta name="google-site-verification" content="i8GB6JW1NZ6Wi96i5fSKspZkYazXkc3IqJ7CQBeEg60" />
+  <meta name="keywords" content="calculateur financier québec, salaire net, hypothèque, TPS TVQ, REER, loyer vs achat, budget mensuel, remboursement dettes, taxe bienvenue québec 2026">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9586278174692187" crossorigin="anonymous"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0e1210;
+      --bg-card: #161c18;
+      --bg-card2: #1c2420;
+      --accent: #4ade80;
+      --accent-glow: rgba(74,222,128,0.12);
+      --border: rgba(255,255,255,0.07);
+      --border-accent: rgba(74,222,128,0.25);
+      --text: #f0ede6;
+      --text-muted: #8a9e90;
+      --text-dim: #4a5e52;
+      --radius: 16px;
+      --radius-sm: 10px;
+    }
+    body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; min-height: 100vh; line-height: 1.6; }
+    .wrap { max-width: 800px; margin: 0 auto; padding: 0 20px 80px; }
+
+    header { padding: 60px 0 48px; border-bottom: 1px solid var(--border); margin-bottom: 48px; }
+    .tag { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); background: var(--accent-glow); border: 1px solid var(--border-accent); padding: 5px 12px; border-radius: 99px; margin-bottom: 20px; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 400; line-height: 1.15; margin-bottom: 14px; }
+    h1 em { font-style: italic; color: var(--accent); }
+    .sub { color: var(--text-muted); font-size: 16px; max-width: 500px; line-height: 1.7; }
+
+    .section-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 16px; }
+
+    .tools-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 48px; }
+    @media (max-width: 520px) { .tools-grid { grid-template-columns: 1fr; } }
+
+    .tool-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; text-decoration: none; color: var(--text); display: block; transition: border-color 0.2s, transform 0.2s; }
+    .tool-card:hover { border-color: var(--border-accent); transform: translateY(-2px); }
+    .tool-icon { width: 44px; height: 44px; border-radius: 12px; background: var(--accent-glow); border: 1px solid var(--border-accent); display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 16px; }
+    .tool-title { font-size: 17px; font-weight: 500; margin-bottom: 8px; }
+    .tool-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px; }
+    .tool-link { font-size: 12px; color: var(--accent); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+
+    .ad-slot { background: var(--bg-card); border: 1px dashed var(--border); border-radius: var(--radius); padding: 20px; text-align: center; color: var(--text-dim); font-size: 13px; min-height: 100px; display: flex; align-items: center; justify-content: center; margin-bottom: 48px; }
+
+    /* CONTENT SECTIONS */
+    .content-section { margin-top: 52px; padding-top: 40px; border-top: 1px solid var(--border); }
+    .content-section h2 { font-family: 'DM Serif Display', serif; font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 400; margin-bottom: 14px; color: var(--text); }
+    .content-section h2 em { font-style: italic; color: var(--accent); }
+    .content-section h3 { font-size: 1rem; font-weight: 600; color: var(--text); margin: 28px 0 10px; }
+    .content-section p { font-size: 15px; color: var(--text-muted); line-height: 1.8; margin-bottom: 14px; }
+
+    .facts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 24px 0; }
+    @media (max-width: 480px) { .facts-grid { grid-template-columns: 1fr; } }
+    .fact-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 16px 18px; }
+    .fact-label { font-size: 12px; color: var(--text-dim); margin-bottom: 4px; }
+    .fact-val { font-size: 1.05rem; font-weight: 600; color: var(--accent); }
+
+    /* FAQ */
+    .faq-section { margin-top: 52px; padding-top: 40px; border-top: 1px solid var(--border); }
+    .faq-section h2 { font-family: 'DM Serif Display', serif; font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 400; margin-bottom: 24px; }
+    .faq-item { border: 1px solid var(--border); border-radius: var(--radius-sm); margin-bottom: 10px; overflow: hidden; }
+    .faq-question { width: 100%; text-align: left; background: var(--bg-card); border: none; padding: 16px 20px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; color: var(--text); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .faq-question:hover { background: rgba(74,222,128,0.05); }
+    .faq-arrow { color: var(--accent); font-size: 18px; transition: transform 0.2s; flex-shrink: 0; }
+    .faq-answer { display: none; padding: 0 20px 16px; font-size: 14px; color: var(--text-muted); line-height: 1.75; background: var(--bg-card); }
+    .faq-item.open .faq-answer { display: block; }
+    .faq-item.open .faq-arrow { transform: rotate(45deg); }
+
+    /* CHECKLIST */
+    .checklist { list-style: none; margin: 16px 0; }
+    .checklist li { font-size: 15px; color: var(--text-muted); padding: 6px 0; padding-left: 24px; position: relative; line-height: 1.6; }
+    .checklist li::before { content: '✓'; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+
+    footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .footer-note { font-size: 12px; color: var(--text-dim); }
+    .footer-links { display: flex; gap: 16px; flex-wrap: wrap; }
+    .footer-links a { font-size: 12px; color: var(--text-dim); text-decoration: none; }
+    .footer-links a:hover { color: var(--accent); }
+  </style>
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calculsquebec.ca/">
+  <meta property="og:title" content="Calculateurs Financiers Québec 2026 – Gratuits et Précis">
+  <meta property="og:description" content="9 calculateurs financiers gratuits pour les Québécois. Salaire net, hypothèque, TPS/TVQ, REER, budget, dettes et plus. Taux officiels 2026.">
+  <meta property="og:locale" content="fr_CA">
+  <meta property="og:site_name" content="CalculsQuebec.ca">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Calculateurs Financiers Québec 2026">
+  <meta name="twitter:description" content="9 calculateurs financiers gratuits pour les Québécois. Taux officiels 2026.">
+  <link rel="canonical" href="https://calculsquebec.ca/">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "CalculsQuebec.ca",
+    "url": "https://calculsquebec.ca",
+    "description": "9 calculateurs financiers gratuits pour les Québécois. Taux officiels 2026.",
+    "inLanguage": "fr-CA",
+    "publisher": { "@type": "Organization", "name": "CalculsQuebec.ca", "url": "https://calculsquebec.ca" }
+  }
+  </script>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="tag">Taux officiels 2026</div>
+    <h1>Calculateurs financiers <em>québécois</em></h1>
+    <p class="sub">9 outils gratuits, précis et sans inscription pour prendre de meilleures décisions financières.</p>
+  </header>
+
+  <div class="ad-slot"><span>Espace publicitaire – Google AdSense</span></div>
+
+  <div class="section-label">Nos 9 outils disponibles</div>
+
+  <div class="tools-grid">
+    <a href="https://calculsquebec.ca/calculateur-salaire-quebec/" class="tool-card">
+      <div class="tool-icon">💰</div>
+      <div class="tool-title">Salaire net Québec</div>
+      <div class="tool-desc">Calculez votre salaire net après impôts fédéral, provincial, RRQ, AE et RQAP. Salarié ou travailleur autonome.</div>
+      <div class="tool-link">Calculer →</div>
+    </a>
+    <a href="https://t-sir12.github.io/depenses-personnelles/" class="tool-card">
+      <div class="tool-icon">💸</div>
+      <div class="tool-title">Dépenses personnelles</div>
+      <div class="tool-desc">Suivez vos dépenses au quotidien et visualisez votre budget semaine par semaine.</div>
+      <div class="tool-link">Suivre →</div>
+    </a>
+    <a href="https://calculsquebec.ca/calculateur-hypotheque-quebec/" class="tool-card">
+      <div class="tool-icon">🏠</div>
+      <div class="tool-title">Hypothèque Québec</div>
+      <div class="tool-desc">Estimez votre paiement mensuel, l'assurance SCHL et votre tableau d'amortissement complet.</div>
+      <div class="tool-link">Calculer →</div>
+    </a>
+    <a href="https://calculsquebec.ca/calculateur-taxes-quebec/" class="tool-card">
+      <div class="tool-icon">🧾</div>
+      <div class="tool-title">Taxes TPS / TVQ</div>
+      <div class="tool-desc">Ajoutez ou retirez la TPS et TVQ instantanément. Inclut les exemptions par catégorie de produit.</div>
+      <div class="tool-link">Calculer →</div>
+    </a>
+    <a href="https://calculsquebec.ca/calculateur-reer-quebec/" class="tool-card">
+      <div class="tool-icon">📈</div>
+      <div class="tool-title">Calculateur REER</div>
+      <div class="tool-desc">Simulez la croissance de votre REER et calculez votre économie d'impôt annuelle selon votre situation.</div>
+      <div class="tool-link">Calculer →</div>
+    </a>
+    <a href="https://calculsquebec.ca/calculateur-loyer-vs-achat/" class="tool-card">
+      <div class="tool-icon">⚖️</div>
+      <div class="tool-title">Loyer vs Achat</div>
+      <div class="tool-desc">Comparez le coût réel de louer vs acheter sur plusieurs années. Verdict personnalisé selon votre situation.</div>
+      <div class="tool-link">Comparer →</div>
+    </a>
+    <a href="https://calculsquebec.ca/calculateur-budget-mensuel/" class="tool-card">
+      <div class="tool-icon">📊</div>
+      <div class="tool-title">Budget mensuel</div>
+      <div class="tool-desc">Planifiez votre budget selon la règle 50/30/20. Analyse de santé financière et conseils personnalisés.</div>
+      <div class="tool-link">Planifier →</div>
+    </a>
+    <a href="https://calculsquebec.ca/calculateur-remboursement-dettes/" class="tool-card">
+      <div class="tool-icon">🔓</div>
+      <div class="tool-title">Remboursement dettes</div>
+      <div class="tool-desc">Calculez votre plan de remboursement avec les méthodes boule de neige ou avalanche. Date de libération incluse.</div>
+      <div class="tool-link">Planifier →</div>
+    </a>
+    <a href="https://calculsquebec.ca/calculateur-taxe-bienvenue/" class="tool-card">
+      <div class="tool-icon">🏛️</div>
+      <div class="tool-title">Taxe de bienvenue</div>
+      <div class="tool-desc">Calculez vos droits de mutation immobilière au Québec. Supplément Montréal et remboursement premiers acheteurs inclus.</div>
+      <div class="tool-link">Calculer →</div>
+    </a>
+  </div>
+
+  <div class="ad-slot"><span>Espace publicitaire – Google AdSense</span></div>
+
+  <!-- SECTION 1 : POURQUOI -->
+  <section class="content-section">
+    <h2>Les finances personnelles au <em>Québec</em> — ce qui vous distingue</h2>
+    <p>Le Québec occupe une position unique dans le paysage financier canadien. Contrairement aux autres provinces, il administre ses propres programmes sociaux et collecte son propre impôt via Revenu Québec, en parallèle de l'Agence du revenu du Canada. Résultat : chaque Québécois remplit deux déclarations de revenus par année et doit maîtriser un système fiscal à deux paliers.</p>
+    <p>Cette complexité se reflète dans des décisions financières quotidiennes — que ce soit comprendre pourquoi votre chèque de paie est amputé différemment de celui d'un collègue ontarien, ou calculer la vraie facture lors de l'achat d'une propriété. Nos outils ont été conçus précisément pour cette réalité québécoise.</p>
+
+    <h3>Les taux clés à connaître en 2026</h3>
+    <div class="facts-grid">
+      <div class="fact-card">
+        <div class="fact-label">RRQ — cotisation de base (salarié)</div>
+        <div class="fact-val">5,3 % jusqu'à 74 600 $</div>
+      </div>
+      <div class="fact-card">
+        <div class="fact-label">Assurance-emploi (Québec)</div>
+        <div class="fact-val">1,30 % jusqu'à 68 900 $</div>
+      </div>
+      <div class="fact-card">
+        <div class="fact-label">RQAP — congés parentaux</div>
+        <div class="fact-val">0,430 % jusqu'à 103 000 $</div>
+      </div>
+      <div class="fact-card">
+        <div class="fact-label">TPS + TVQ combinées</div>
+        <div class="fact-val">14,975 % sur produits taxables</div>
+      </div>
+      <div class="fact-card">
+        <div class="fact-label">Plafond REER 2026</div>
+        <div class="fact-val">32 490 $ (ou 18 % du revenu)</div>
+      </div>
+      <div class="fact-card">
+        <div class="fact-label">Taux marginal max. Québec</div>
+        <div class="fact-val">53,31 % (fédéral + provincial)</div>
+      </div>
+    </div>
+
+    <h3>Pourquoi les Québécois paient plus d'impôt — et ce qu'ils reçoivent en retour</h3>
+    <p>Le Québec affiche le taux d'imposition provincial le plus élevé au Canada, avec un palier supérieur de 25,75 % sur les revenus au-delà de 129 590 $. En contrepartie, la province offre des services publics parmi les plus généreux en Amérique du Nord : garderies à contribution réduite (CPE), congés parentaux étendus via le RQAP, tarifs d'électricité parmi les plus bas du continent, et un réseau de santé universel financé par la RAMQ.</p>
+    <p>Comprendre cette équation vous permet de prendre de meilleures décisions — comme maximiser vos cotisations REER pour récupérer une portion importante de vos impôts, ou planifier vos revenus pour éviter les paliers d'imposition les plus élevés.</p>
+
+    <h3>La spécificité immobilière québécoise</h3>
+    <p>Le marché immobilier québécois présente aussi des particularités importantes. La taxe de bienvenue — officiellement les droits de mutation immobilière — est une dépense unique à l'achat souvent sous-estimée par les acheteurs. À Montréal, un supplément s'ajoute pour les propriétés de grande valeur. Et depuis décembre 2024, les premiers acheteurs peuvent amortir leur prêt sur 30 ans au lieu de 25, améliorant significativement l'accessibilité à la propriété.</p>
+  </section>
+
+  <!-- SECTION 2 : GUIDE -->
+  <section class="content-section">
+    <h2>Guide de la <em>santé financière</em> au Québec</h2>
+    <p>Une bonne santé financière repose sur quatre piliers fondamentaux : contrôler ses dépenses, constituer une épargne d'urgence, rembourser ses dettes à coût élevé, et investir à long terme. Voici comment les aborder dans le contexte québécois.</p>
+
+    <h3>Étape 1 — Connaître son salaire net réel</h3>
+    <p>Beaucoup de Québécois négocient leur salaire en brut sans savoir exactement ce qu'ils toucheront après déductions. Entre l'impôt fédéral, l'impôt provincial, le RRQ, l'AE et le RQAP, un salarié gagnant 70 000 $ brut reçoit environ 50 000 $ net — soit un taux effectif de déduction d'environ 29 %. Notre calculateur de salaire net vous donne le portrait complet en quelques secondes.</p>
+
+    <h3>Étape 2 — Appliquer la règle 50/30/20</h3>
+    <p>La règle 50/30/20 est un cadre simple et éprouvé : consacrez 50 % de votre revenu net aux besoins essentiels (logement, épicerie, transport), 30 % à vos envies personnelles, et au moins 20 % à l'épargne et au remboursement de dettes. Au Québec, où les loyers sont généralement plus abordables qu'en Ontario, il est souvent possible de respecter ce ratio, surtout en dehors des grandes villes.</p>
+
+    <h3>Étape 3 — Maximiser ses avantages fiscaux</h3>
+    <p>Le REER est l'outil de réduction d'impôt le plus puissant disponible aux Québécois. Chaque dollar cotisé réduit directement votre revenu imposable. Pour quelqu'un au taux marginal de 37 %, une cotisation de 10 000 $ au REER génère un remboursement d'impôt d'environ 3 700 $ — un rendement immédiat et garanti. Le CELI, lui, ne réduit pas votre impôt aujourd'hui mais protège tous vos revenus de placement à l'abri de l'impôt pour toujours.</p>
+
+    <h3>Étape 4 — Planifier l'achat immobilier</h3>
+    <p>Acheter une propriété au Québec implique de prévoir plusieurs coûts au-delà de la mise de fonds : la taxe de bienvenue (environ 1,5 à 2 % du prix), les frais de notaire (1 200 $ à 2 200 $), l'inspection préachat (400 à 600 $), et l'assurance SCHL si votre mise de fonds est inférieure à 20 %. Au total, comptez entre 3 % et 5 % du prix d'achat en frais de clôture supplémentaires.</p>
+
+    <ul class="checklist">
+      <li>Calculer votre salaire net avant de fixer votre budget d'achat</li>
+      <li>Prévoir la taxe de bienvenue dans votre mise de fonds</li>
+      <li>Vérifier si vous êtes admissible au remboursement pour premiers acheteurs</li>
+      <li>Comparer le coût réel de louer vs acheter sur votre horizon de vie</li>
+      <li>Maintenir un fonds d'urgence de 3 à 6 mois de dépenses</li>
+    </ul>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <h2>Questions fréquentes sur les finances au Québec</h2>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Pourquoi les Québécois ont-ils deux déclarations de revenus?
+        <span class="faq-arrow">+</span>
+      </button>
+      <div class="faq-answer">Le Québec est la seule province canadienne à percevoir elle-même son impôt provincial via Revenu Québec, plutôt que de déléguer cette tâche à l'Agence du revenu du Canada (ARC). Les résidents du Québec doivent donc produire une déclaration fédérale auprès de l'ARC et une déclaration provinciale auprès de Revenu Québec. En contrepartie, le Québec reçoit une compensation fédérale (l'abattement du Québec de 16,5 %) qui réduit l'impôt fédéral payable par les Québécois pour financer ses propres programmes sociaux comme le RRQ et le RQAP.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Quelle est la différence entre le REER et le CELI?
+        <span class="faq-arrow">+</span>
+      </button>
+      <div class="faq-answer">Le REER (Régime enregistré d'épargne-retraite) permet de déduire vos cotisations de votre revenu imposable aujourd'hui, mais vous paierez de l'impôt sur les retraits à la retraite. C'est avantageux si vous êtes dans un palier d'imposition plus élevé maintenant qu'à la retraite. Le CELI (Compte d'épargne libre d'impôt) n'offre pas de déduction immédiate, mais tous les revenus de placement et retraits sont complètement à l'abri de l'impôt, pour toujours. Pour la plupart des Québécois à revenu moyen, une combinaison des deux est optimale : REER pour réduire l'impôt maintenant, CELI pour la flexibilité à long terme.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Comment fonctionne le régime québécois d'assurance parentale (RQAP)?
+        <span class="faq-arrow">+</span>
+      </button>
+      <div class="faq-answer">Le RQAP est un programme d'assurance exclusif au Québec qui verse des prestations lors d'un congé de maternité, de paternité, parental ou d'adoption. Il se distingue avantageusement du programme fédéral d'assurance-emploi : il offre un délai de carence de zéro semaine (contre deux semaines pour l'AE), des taux de remplacement du revenu plus élevés, et un congé de paternité exclusif aux pères de 5 semaines à taux élevé. Les travailleurs autonomes y sont également admissibles, contrairement à l'AE standard. En 2026, le taux de cotisation est de 0,430 % jusqu'à 103 000 $ de revenus assurables.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Est-ce que la TVQ s'applique sur la TPS au Québec?
+        <span class="faq-arrow">+</span>
+      </button>
+      <div class="faq-answer">Oui, c'est l'une des particularités du système de taxes québécois. La TVQ de 9,975 % est calculée sur le prix de vente incluant déjà la TPS de 5 %. Ce mécanisme — parfois appelé "taxe sur la taxe" — explique pourquoi le taux combiné effectif est légèrement supérieur à la simple addition 5 % + 9,975 % = 14,975 %. En pratique, pour un achat de 100 $, la TPS ajoute 5 $ (total intermédiaire : 105 $), et la TVQ s'applique sur ces 105 $, ajoutant 10,47 $, pour un total de 115,47 $. Notre calculateur de taxes effectue automatiquement ce calcul.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Quels sont les avantages financiers d'être propriétaire au Québec vs locataire?
+        <span class="faq-arrow">+</span>
+      </button>
+      <div class="faq-answer">Être propriétaire au Québec offre plusieurs avantages à long terme : construction d'équité (chaque paiement hypothécaire rembourse une portion du capital), protection contre les hausses de loyer, possibilité de rénovation selon vos préférences, et gain en capital exonéré d'impôt sur la résidence principale lors de la revente. Cependant, la location offre une flexibilité précieuse, notamment au Québec où les loyers sont historiquement plus abordables que dans les autres grandes provinces, et où la Régie du logement offre des protections solides aux locataires. La décision optimale dépend de votre horizon temporel, de votre situation professionnelle et du marché local.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Comment réduire son impôt légalement au Québec?
+        <span class="faq-arrow">+</span>
+      </button>
+      <div class="faq-answer">Plusieurs stratégies légales permettent de réduire votre fardeau fiscal au Québec. La cotisation au REER est la plus efficace : elle réduit directement votre revenu imposable. Les cotisations au CELI ne réduisent pas l'impôt actuel mais protègent vos rendements futurs. D'autres déductions incluent : les frais de garde d'enfants, les dons de bienfaisance (crédit fédéral et provincial), les frais médicaux admissibles non remboursés, et les frais de déménagement pour des raisons professionnelles. Si vous êtes travailleur autonome, plusieurs dépenses d'affaires sont déductibles, incluant une portion du loyer ou de l'hypothèque si vous travaillez de la maison.</div>
+    </div>
+  </section>
+
+  <div class="ad-slot" style="margin-top:40px;"><span>Espace publicitaire – Google AdSense</span></div>
+
+  <footer>
+    <div class="footer-note">Outils à titre informatif. Consultez un professionnel pour votre situation personnelle. Taux officiels 2026.</div>
+    <div class="footer-links">
+      <a href="/a-propos">À propos</a>
+      <a href="/contact">Contact</a>
+      <a href="/politique-confidentialite">Confidentialité</a>
+    </div>
+  </footer>
+
+</div>
+<script>
+  function toggleFaq(btn) {
+    btn.parentElement.classList.toggle('open');
+  }
+</script>
+</body>
+</html>
